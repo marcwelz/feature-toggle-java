@@ -4,16 +4,12 @@ import com.ch.marcwelz.featuretogglejava.api.resource.Feature;
 import com.ch.marcwelz.featuretogglejava.service.FeatureService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotEmpty;
-
-import org.springframework.http.MediaType;
-import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 
 @RestController
