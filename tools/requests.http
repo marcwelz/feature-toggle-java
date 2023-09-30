@@ -1,0 +1,27 @@
+### ----------GET----------
+GET http://localhost:8080/rest/features
+Content-Type: application/json
+
+### GET BY KEY
+GET http://localhost:8080/rest/features/feature-1
+Content-Type: application/json
+
+### GET ACCESS VALUE
+GET http://localhost:8080/rest/features/value/feature-4
+Content-Type: application/json
+
+### ----------POST----------
+POST http://localhost:8080/rest/features
+Content-Type: application/json
+
+{
+  "name": "feature-11",
+  "comment": "feature toggle",
+  "value": false,
+  "validFrom": null,
+  "validTo": null
+}
+
+### ----------DELETE----------
+DELETE  http://localhost:8080/rest/features/feature-2
+Content-Type: application/json
