@@ -21,7 +21,8 @@ public class FeatureController {
 
     private final String REQUEST_KEY_PARAM = "/{name}";
 
-    @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(
+            produces = MediaType.APPLICATION_JSON_VALUE)
     public List<Feature> getAllFeatures() {
         return service.getAllFeatures();
     }
@@ -33,7 +34,9 @@ public class FeatureController {
         return service.searchFeature(name);
     }
 
-    @GetMapping(value = "/value" + REQUEST_KEY_PARAM, produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(
+            value = "/value" + REQUEST_KEY_PARAM,
+            produces = MediaType.APPLICATION_JSON_VALUE)
     public boolean getAccessValue(@NotBlank @PathVariable String name) {
         return service.getValue(name);
     }
@@ -46,7 +49,8 @@ public class FeatureController {
         return service.createFeature(feature);
     }
 
-    @DeleteMapping(value = REQUEST_KEY_PARAM)
+    @DeleteMapping(
+            value = REQUEST_KEY_PARAM)
     public void deleteFeature(@NotBlank @PathVariable String name) {
         service.deleteFeature(name);
     }
